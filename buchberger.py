@@ -24,7 +24,6 @@ def groebner(poly_list):
                 if j <= (i - 1):
                     S = (ideal[i].S_polynomial(ideal[j])).divide(ideal)[1]
                     if not S.is_zero():
-#                        print 'i = '+str(ideal[i]), 'j =' + str(ideal[j]), 'S polynomial = %s, S remainder = %s' %(ideal[i].S_polynomial(ideal[j]), S)
                         ideal.append(S)
                         changed = True
                 if changed:
