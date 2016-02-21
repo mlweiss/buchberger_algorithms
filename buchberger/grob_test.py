@@ -15,7 +15,7 @@ max_terms = 7
 for trial in range(10000):
 	num_polys = randint(2, max_terms)
 	I = [R.random(max_degree, max_terms) for i in range(num_polys)]
-	I = [poly for poly in I if len(poly.coeffs)] # I recall that this is bad but why?
+	I = [poly for poly in I if len(poly.coeffs)]
 	J = groebner(I)
 	test = is_groebner(J)
 	assert test
